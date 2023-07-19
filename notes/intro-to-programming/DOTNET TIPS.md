@@ -1,0 +1,1 @@
+- Hover over function to see the parameters and return type
