@@ -12,7 +12,7 @@ namespace Banking.UnitTests.BankAccounts
         [Fact]
         public void DoesNotDecreaseTheBalance()
         {
-            var account = new BankAccount();
+            var account = new BankAccount(new Mock<ICanCalculateBonusesForBankAccountDeposits>().Object);
             var openingBalance = account.GetBalance();
             var amountToWithdraw = openingBalance + .01M;
             var caught = false;
